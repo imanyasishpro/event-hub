@@ -3,7 +3,7 @@ import { ConcertModel } from "./concerts/concerts-grid/concerts-concert/concert.
 export const concerts: ConcertModel[] = [
     {
     concertId: 'c1',
-    title: 'Hrima Badu 3k',
+    title: 'Test 1',
     batch: 'New Event',
     date: '2025-10-12',
     location: 'Anthonys College',
