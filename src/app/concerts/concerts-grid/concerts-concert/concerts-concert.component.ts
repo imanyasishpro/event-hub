@@ -12,4 +12,11 @@ export class ConcertsConcertComponent {
 
   @Input ({required: true}) concert!: ConcertModel;
   
+  test() {
+    console.log("clicked")
+  }
+
+  buy() {
+    console.log("buy");
+  }
 }

@@ -1,0 +1,199 @@
+.event-hero {
+            padding: 180px 0 60px;
+            background: linear-gradient(135deg, rgba(58, 12, 163, 0.1) 0%, rgba(67, 97, 238, 0.1) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .event-hero-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .event-hero-img {
+            flex: 1;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .event-hero-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .event-hero-details {
+            flex: 1;
+        }
+        
+        .event-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .event-title {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .event-meta {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gray);
+        }
+        
+        .meta-item i {
+            color: var(--primary);
+        }
+        
+        .event-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+        
+        .event-actions {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .btn-danger {
+            background: #dc2626;
+            border-color: #dc2626;
+        }
+        
+        .btn-danger:hover {
+            background: transparent;
+            color: #dc2626;
+        }
+        
+        /* Event Details Section */
+        .event-details-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .details-container {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .event-description {
+            flex: 2;
+        }
+        
+        .event-description h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .event-description p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .event-sidebar {
+            flex: 1;
+        }
+        
+        .sidebar-card {
+            background: var(--light);
+            border-radius: var(--radius);
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .sidebar-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .sidebar-card h4 i {
+            color: var(--primary);
+        }
+        
+        .artist-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .artist-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .artist-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .artist-info h5 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .artist-info p {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        /* Similar Events Section */
+        .similar-events {
+            padding: 60px 0;
+            background: linear-gradient(to bottom, #f0f9ff, #e0f2fe);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .event-hero-content {
+                flex-direction: column;
+            }
+            
+            .details-container {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .event-title {
+                font-size: 2rem;
+            }
+            
+            .event-meta {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .event-actions {
+                flex-direction: column;
+            }
+        }
