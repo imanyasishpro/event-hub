@@ -6,7 +6,7 @@
         </div>
         <div class="concerts-grid">
             @for(concert of concerts; track concertId) {
-            <app-concerts-concert [concert]="concert"></app-concerts-concert>
+            <app-concerts-concert [concert]="concert" (selected)="selectedConcert($event)"></app-concerts-concert>
             }
 
             <div class="add-concert-box" id="add-concert">
@@ -25,4 +25,8 @@
     <app-add-concert></app-add-concert>
 }@else {
     <p>add</p>
+}
+
+@if(isSelectedConcert) {
+    <app-view-concert [concert]="theSelectedConcert"></app-view-concert>
 }

@@ -1,4 +1,4 @@
-<div class="concert-card" (mousedown)="test()">
+<div class="concert-card" (mousedown)="concertSelected(concert.concertId)">
     <div class="concert-badge">{{concert.batch}}</div>
     <div class="concert-img">
         <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
@@ -18,7 +18,7 @@
             <a class="btn btn-accent" (click)="buy()">Buy Tickets</a>
             <div class="concert-stats">
                 <div class="stat-item">
-                    <i class="fas fa-ticket-alt"></i> {{concert.ticletsLeft}}
+                    <i class="fas fa-ticket-alt"></i> {{concert.ticletsLeft}} Left
                 </div>
             </div>
         </div>

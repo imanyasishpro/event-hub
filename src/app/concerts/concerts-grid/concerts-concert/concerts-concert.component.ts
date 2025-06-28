@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ConcertModel } from './concert.model';
 
 @Component({
@@ -11,10 +11,12 @@ import { ConcertModel } from './concert.model';
 export class ConcertsConcertComponent {
 
   @Input ({required: true}) concert!: ConcertModel;
-  
-  test() {
-    console.log("clicked")
+  @Output() selected = new EventEmitter<string>();
+
+  concertSelected(id: string) {
+    this.selected.emit(id)
   }
+
 
   buy() {
     console.log("buy");

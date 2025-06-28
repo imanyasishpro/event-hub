@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ConcertModel } from '../concerts-concert/concert.model';
 
 @Component({
   selector: 'app-view-concert',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './view-concert.component.css'
 })
 export class ViewConcertComponent {
-
+  @Input({required: true}) concert?: ConcertModel;
 }

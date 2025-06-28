@@ -5,21 +5,21 @@
                     <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Rock Legends Tour">
                 </div>
                 <div class="event-hero-details">
-                    <span class="event-badge">Almost Sold Out</span>
-                    <h1 class="event-title">Rock Legends Tour 2023</h1>
+                    <span class="event-badge">{{concert?.batch}}</span>
+                    <h1 class="event-title">{{concert?.title}}</h1>
                     
                     <div class="event-meta">
                         <div class="meta-item">
                             <i class="far fa-calendar-alt"></i>
-                            <span>July 18, 2023 • 8:00 PM</span>
+                            <span>{{concert?.date}}</span>
                         </div>
                         <div class="meta-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Barclays Center, Brooklyn, NY</span>
+                            <span>{{concert?.location}}</span>
                         </div>
                     </div>
                     
-                    <div class="event-price">From $75.00</div>
+                    <div class="event-price">{{concert?.ticketPrice}}</div>
                     
                     <div class="event-actions">
                         <a href="#" class="btn btn-accent">Buy Tickets</a>
@@ -29,7 +29,7 @@
                     
                     <div class="ticket-progress">
                         <div class="progress-bar" style="width: 85%;"></div>
-                        <span>Only 105 tickets left!</span>
+                        <span>{{concert?.ticletsLeft}} Left</span>
                     </div>
                 </div>
             </div>
