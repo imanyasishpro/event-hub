@@ -1,0 +1,75 @@
+.concerts-hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, rgba(58, 12, 163, 0.1) 0%, rgba(67, 97, 238, 0.1) 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .concerts-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            opacity: 0.05;
+        }
+
+        .concerts-hero-content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            z-index: 2;
+        }
+
+        .concerts-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .concerts-hero h1 span {
+            color: var(--primary);
+        }
+
+        .concerts-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--gray);
+        }
+
+        .hero-search {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 50px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-search input {
+            flex-grow: 1;
+            padding: 15px 25px;
+            border: none;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .hero-search button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .hero-search button:hover {
+            background: var(--secondary);
+        }
+

@@ -1,0 +1,26 @@
+<div class="concert-card">
+    <div class="concert-badge">{{concert.batch}}</div>
+    <div class="concert-img">
+        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            alt="Rock Legends Tour">
+    </div>
+    <div class="concert-content">
+        <div class="concert-meta">
+            <div class="concert-date-location">
+                <span>{{concert.date}}</span>
+                <span>{{concert.location}}</span>
+            </div>
+            <div class="concert-price-tag">{{concert.ticketPrice}}</div>
+        </div>
+        <h3>{{concert.title}}</h3>
+        <p>{{concert.title}}</p>
+        <div class="concert-footer">
+            <a href="#" class="btn btn-accent">Buy Tickets</a>
+            <div class="concert-stats">
+                <div class="stat-item">
+                    <i class="fas fa-ticket-alt"></i> {{concert.ticletsLeft}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

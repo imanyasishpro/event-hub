@@ -1,0 +1,28 @@
+<section class="concerts-grid-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Upcoming Concerts</h2>
+            <p>Find the perfect musical experience for your taste</p>
+        </div>
+        <div class="concerts-grid">
+            @for(concert of concerts; track concertId) {
+            <app-concerts-concert [concert]="concert"></app-concerts-concert>
+            }
+
+            <div class="add-concert-box" id="add-concert">
+                <div class="add-icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <h3>Add New Concert</h3>
+                <p>Click here to add a new concert to our platform</p>
+                <button class="btn btn-secondary" (click)="isAddConcert = true">Add Concert</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+@if(isAddConcert) {
+    <app-add-concert></app-add-concert>
+}@else {
+    <p>add</p>
+}

@@ -1,0 +1,42 @@
+.concerts-filters {
+            padding: 50px 0;
+            background: white;
+        }
+
+        .filters-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background: var(--light);
+            border: 2px solid #e2e8f0;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .sort-select {
+            padding: 10px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 50px;
+            font-family: inherit;
+            font-weight: 500;
+            background: var(--light);
+        }
