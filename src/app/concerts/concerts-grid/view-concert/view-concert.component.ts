@@ -1,27 +1,31 @@
-import { Component, EventEmitter, inject, input, Input, Output } from '@angular/core';
+import { Component, EventEmitter, inject, input, Input, OnInit, Output } from '@angular/core';
 import { ConcertModel } from '../concerts-concert/concert.model';
 import { ConcertsService } from '../concerts.service';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-view-concert',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './view-concert.component.html',
   styleUrl: './view-concert.component.css'
 })
-export class ViewConcertComponent {
+export class ViewConcertComponent implements OnInit{
 
   @Input({required: true}) concertId!: string;
   private concertService = inject(ConcertsService);
+  private activatedRoute = inject(ActivatedRoute);
+  theConcert?: ConcertModel;
 
-  theConcert?: ConcertModel = this.concertService.getConcert(this.concertId)
-
-  @Input({required: true}) concert?: ConcertModel;
+  ngOnInit(): void {
+    console.log(this.activatedRoute);
+    this.theConcert = this.concertService.getConcert(this.concertId);
+    console.log(this.theConcert)
+  }
   @Output() deletedConcertId = new EventEmitter<string>();
 
-  constructor(private concertsService: ConcertsService) {}
 
   deleteConcert(id?:string ) {
-    this.concertsService.deleteConcert(id);
+    this.concertService.deleteConcert(id);
   }
 }
