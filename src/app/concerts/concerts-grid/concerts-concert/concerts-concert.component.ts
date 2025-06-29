@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ConcertModel } from './concert.model';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-concerts-concert',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './concerts-concert.component.html',
   styleUrl: './concerts-concert.component.css'
 })

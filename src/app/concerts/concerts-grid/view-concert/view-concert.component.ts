@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, inject, input, Input, Output } from '@angular/core';
 import { ConcertModel } from '../concerts-concert/concert.model';
 import { ConcertsService } from '../concerts.service';
 
@@ -10,6 +10,12 @@ import { ConcertsService } from '../concerts.service';
   styleUrl: './view-concert.component.css'
 })
 export class ViewConcertComponent {
+
+  @Input({required: true}) concertId!: string;
+  private concertService = inject(ConcertsService);
+
+  theConcert?: ConcertModel = this.concertService.getConcert(this.concertId)
+
   @Input({required: true}) concert?: ConcertModel;
   @Output() deletedConcertId = new EventEmitter<string>();
 

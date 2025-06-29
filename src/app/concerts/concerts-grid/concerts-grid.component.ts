@@ -14,7 +14,7 @@ import { ConcertsService } from './concerts.service';
 })
 export class ConcertsGridComponent {
   concerts = this.concertsService.getConcerts();
-  concertId: any;
+  concertId!: string;
   isAddConcert: boolean = false;
   isSelectedConcert: boolean = false;
   theSelectedConcert?:ConcertModel ;
@@ -22,6 +22,7 @@ export class ConcertsGridComponent {
   constructor(private concertsService: ConcertsService) {}
 
   selectedConcert(id:string) {
+    this.concertId = id;
     this.theSelectedConcert = this.concertsService.getConcert(id);
     this.isSelectedConcert = this.concertsService.isSelectedConcert;
   }

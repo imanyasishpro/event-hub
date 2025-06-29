@@ -5,31 +5,31 @@
                     <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Rock Legends Tour">
                 </div>
                 <div class="event-hero-details">
-                    <span class="event-badge">{{concert?.batch}}</span>
-                    <h1 class="event-title">{{concert?.title}}</h1>
+                    <span class="event-badge">{{theConcert?.batch}}</span>
+                    <h1 class="event-title">{{theConcert?.title}}</h1>
                     
                     <div class="event-meta">
                         <div class="meta-item">
                             <i class="far fa-calendar-alt"></i>
-                            <span>{{concert?.date}}</span>
+                            <span>{{theConcert?.date}}</span>
                         </div>
                         <div class="meta-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>{{concert?.location}}</span>
+                            <span>{{theConcert?.location}}</span>
                         </div>
                     </div>
                     
-                    <div class="event-price">{{concert?.ticketPrice}}</div>
+                    <div class="event-price">{{theConcert?.ticketPrice}}</div>
                     
                     <div class="event-actions">
                         <a href="#" class="btn btn-accent">Buy Tickets</a>
                         <a href="#" class="btn btn-secondary" id="edit-event">Edit Event</a>
-                        <a class="btn btn-danger" id="delete-event" (click)="deleteConcert(concert?.concertId)">Delete Event</a>
+                        <a class="btn btn-danger" id="delete-event" (click)="deleteConcert(theConcert?.concertId)">Delete Event</a>
                     </div>
                     
                     <div class="ticket-progress">
                         <div class="progress-bar" style="width: 85%;"></div>
-                        <span>{{concert?.ticletsLeft}} Left</span>
+                        <span>{{theConcert?.ticletsLeft}} Left</span>
                     </div>
                 </div>
             </div>
