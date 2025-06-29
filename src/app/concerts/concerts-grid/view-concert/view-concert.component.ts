@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ConcertModel } from '../concerts-concert/concert.model';
+import { ConcertsService } from '../concerts.service';
 
 @Component({
   selector: 'app-view-concert',
@@ -10,4 +11,11 @@ import { ConcertModel } from '../concerts-concert/concert.model';
 })
 export class ViewConcertComponent {
   @Input({required: true}) concert?: ConcertModel;
+  @Output() deletedConcertId = new EventEmitter<string>();
+
+  constructor(private concertsService: ConcertsService) {}
+
+  deleteConcert(id?:string ) {
+    this.concertsService.deleteConcert(id);
+  }
 }

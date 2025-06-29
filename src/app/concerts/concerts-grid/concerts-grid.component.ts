@@ -22,7 +22,7 @@ export class ConcertsGridComponent {
   constructor(private concertsService: ConcertsService) {}
 
   selectedConcert(id:string) {
-    this.isSelectedConcert = true;
     this.theSelectedConcert = this.concertsService.getConcert(id);
+    this.isSelectedConcert = this.concertsService.isSelectedConcert;
   }
 }

@@ -79,11 +79,21 @@ export class ConcertsService {
         }
     ]
 
+    isSelectedConcert:boolean = false;
+
     getConcert(id: string) {
+        this.isSelectedConcert = true;
         return this.concerts.find((concert) => concert.concertId === id);
     }
 
     getConcerts() {
         return this.concerts;
+    }
+
+    deleteConcert(id?: string) {
+        this.isSelectedConcert = false;
+        this.concerts = this.concerts.filter((concert) => concert.concertId !== id);
+        console.log(this.concerts);
+        console.log(this.isSelectedConcert);
     }
 }
