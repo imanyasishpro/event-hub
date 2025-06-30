@@ -6,7 +6,7 @@
         </div>
 
         <div class="concerts-grid">
-            @for(concert of concerts; track concertId) {
+            @for(concert of concerts; track concert.concertId) {
             <app-concerts-concert [concert]="concert" (selected)="selectedConcert($event)"></app-concerts-concert>
             }
 

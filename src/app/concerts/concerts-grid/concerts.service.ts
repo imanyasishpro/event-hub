@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { ConcertModel } from "./concerts-concert/concert.model";
+import { NewConcertModel } from "./add-concert/new-concert.model";
 
 @Injectable({
     providedIn: 'root'
@@ -8,7 +9,7 @@ import { ConcertModel } from "./concerts-concert/concert.model";
 export class ConcertsService {
     private concerts: ConcertModel[] = [
         {
-            concertId: 'c1',
+            concertId: '1',
             title: 'Test 1',
             batch: 'New Event',
             date: '2025-10-12',
@@ -18,7 +19,7 @@ export class ConcertsService {
             ticletsLeft: 100
         },
         {
-            concertId: 'c2',
+            concertId: '2',
             title: 'Avatar',
             batch: 'New Event',
             date: '2025-10-12',
@@ -28,7 +29,7 @@ export class ConcertsService {
             ticletsLeft: 100
         },
         {
-            concertId: 'c3',
+            concertId: '3',
             title: 'Avengers',
             batch: 'New Event',
             date: '2025-10-12',
@@ -38,7 +39,7 @@ export class ConcertsService {
             ticletsLeft: 100
         },
         {
-            concertId: 'c4',
+            concertId: '4',
             title: 'Black Panther',
             batch: 'New Event',
             date: '2025-10-12',
@@ -48,7 +49,7 @@ export class ConcertsService {
             ticletsLeft: 100
         },
         {
-            concertId: 'c5',
+            concertId: '5',
             title: 'Spider Man',
             batch: 'New Event',
             date: '2025-10-12',
@@ -58,7 +59,7 @@ export class ConcertsService {
             ticletsLeft: 100
         },
         {
-            concertId: 'c6',
+            concertId: '6',
             title: 'Dora',
             batch: 'New Event',
             date: '2025-10-12',
@@ -68,7 +69,7 @@ export class ConcertsService {
             ticletsLeft: 100
         },
         {
-            concertId: 'c7',
+            concertId: '7',
             title: 'Test',
             batch: 'New Event',
             date: '2025-10-12',
@@ -88,6 +89,19 @@ export class ConcertsService {
 
     getConcerts() {
         return this.concerts;
+    }
+
+    addConcert(concert: NewConcertModel) {
+        this.concerts.push({
+            concertId: "a1",
+            title: concert.concertTitle,
+            batch: "new event",
+            date: concert.date,
+            location: concert.location,
+            description: concert.description,
+            ticketPrice: concert.ticketPrice,
+            ticletsLeft: concert.avalableTickets
+        })
     }
 
     deleteConcert(id?: string) {
