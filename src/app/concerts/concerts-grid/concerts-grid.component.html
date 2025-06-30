@@ -4,6 +4,7 @@
             <h2>Upcoming Concerts</h2>
             <p>Find the perfect musical experience for your taste</p>
         </div>
+
         <div class="concerts-grid">
             @for(concert of concerts; track concertId) {
             <app-concerts-concert [concert]="concert" (selected)="selectedConcert($event)"></app-concerts-concert>
@@ -22,7 +23,5 @@
 </section>
 
 @if(isAddConcert) {
-    <app-add-concert></app-add-concert>
-}@else {
-    <p>add</p>
+<app-add-concert [isAddConcert]="isAddConcert" (cancelAdding)="isAddConcert = false"></app-add-concert>
 }
