@@ -14,24 +14,15 @@ export class AddConcertComponent implements OnInit{
   @Input({required: true}) isAddConcert!: boolean;
   @Output() cancelAdding = new EventEmitter<boolean>();
 
-  concertTitle!: string;
-  artistName!: string
-  date!: string;
-  location!: string;
-  ticketPrice!: string;
-  avalableTickets!: number;
-  imageUrl!: string;
-  description!: string;
-
   newConcert: NewConcertModel = {
-    concertTitle: this.concertTitle,
-    artistName: this.artistName,
-    date: this.date,
-    location: this.location,
-    ticketPrice: this.ticketPrice,
-    avalableTickets: this.avalableTickets,
-    imageUrl: this.imageUrl,
-    description: this.description
+    concertTitle: '',
+    artistName: '',
+    date: '',
+    location: '',
+    ticketPrice: '',
+    avalableTickets: 0,
+    imageUrl: '',
+    description: ''
   }
 
   constructor(private concertsService: ConcertsService) {}
@@ -49,7 +40,7 @@ export class AddConcertComponent implements OnInit{
   }
 
   onSubmit() {
-    this.concertsService.addConcert(this.newConcert)
-    console.log(this.newConcert)
+    this.concertsService.addConcert(this.newConcert);
+    this.cancel();
   }
 }

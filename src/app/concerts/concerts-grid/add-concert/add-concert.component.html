@@ -11,45 +11,45 @@
             <form id="concert-form" (ngSubmit)="onSubmit()">
                 <div class="form-group">
                     <label for="concert-name">Concert Name</label>
-                    <input type="text" id="concert-name" class="form-control" placeholder="Enter concert name" required [(ngModel)]="concertTitle" name="first">
+                    <input type="text" id="concert-name" class="form-control" placeholder="Enter concert name" required [(ngModel)]="newConcert.concertTitle" name="first">
                 </div>
 
                 <div class="form-group">
                     <label for="artist-name">Artist Name</label>
-                    <input type="text" id="artist-name" class="form-control" placeholder="Enter artist name" required [(ngModel)]="artistName" name="first">
+                    <input type="text" id="artist-name" class="form-control" placeholder="Enter artist name" required [(ngModel)]="newConcert.artistName" name="first">
                 </div>
 
                 <div class="form-group">
                     <label for="concert-date">Date & Time</label>
-                    <input type="datetime-local" id="concert-date" class="form-control" required [(ngModel)]="date" name="first">
+                    <input type="datetime-local" id="concert-date" class="form-control" required [(ngModel)]="newConcert.date" name="first">
                 </div>
 
                 <div class="form-group">
                     <label for="concert-venue">Venue</label>
-                    <input type="text" id="concert-venue" class="form-control" placeholder="Enter venue name" required [(ngModel)]="location" name="first">
+                    <input type="text" id="concert-venue" class="form-control" placeholder="Enter venue name" required [(ngModel)]="newConcert.location" name="first">
                 </div>
 
                 <div class="form-group">
                     <label for="concert-price">Ticket Price ($)</label>
                     <input type="number" id="concert-price" class="form-control" placeholder="Enter ticket price"
-                        min="0" step="0.01" required [(ngModel)]="ticketPrice" name="first">
+                        min="0" step="0.01" required [(ngModel)]="newConcert.ticketPrice" name="first">
                 </div>
 
                 <div class="form-group">
                     <label for="ticket-quantity">Available Tickets</label>
                     <input type="number" id="ticket-quantity" class="form-control" placeholder="Enter number of tickets"
-                        min="1" required [(ngModel)]="avalableTickets" name="first">
+                        min="1" required [(ngModel)]="newConcert.avalableTickets" name="first">
                 </div>
 
                 <div class="form-group">
                     <label for="concert-image">Image URL</label>
-                    <input type="url" id="concert-image" class="form-control" placeholder="Paste image URL" required [(ngModel)]="imageUrl" name="first">
+                    <input type="url" id="concert-image" class="form-control" placeholder="Paste image URL" required [(ngModel)]="newConcert.imageUrl" name="first">
                 </div>
 
                 <div class="form-group">
                     <label for="concert-description">Description</label>
                     <textarea id="concert-description" class="form-control" placeholder="Enter concert description"
-                        required [(ngModel)]="description" name="first"></textarea>
+                        required [(ngModel)]="newConcert.description" name="first"></textarea>
                 </div>
             </form>
         </div>
