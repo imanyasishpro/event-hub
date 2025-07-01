@@ -1,0 +1,142 @@
+    <div class="container">
+        <div class="logo" style="text-align: center; margin-bottom: 30px;">
+            <a href="#" style="font-size: 2.5rem; text-decoration: none;">
+                <i class="fas fa-ticket-alt" style="color: var(--accent);"></i> 
+                <span style="color: var(--primary);">Event</span>Hub
+            </a>
+        </div>
+        
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <h1 style="font-size: 2.8rem; margin-bottom: 20px;">Welcome to Event Hub</h1>
+            <p style="font-size: 1.2rem; color: var(--gray); margin-bottom: 30px;">
+                Login to access your account and start booking tickets for amazing events
+            </p>
+            
+            <button id="open-login-modal" class="btn" style="margin-bottom: 20px;" (click)="onLogin()">
+                <i class="fas fa-sign-in-alt"></i> Login to Your Account
+            </button>
+            
+            <p style="color: var(--gray);">
+                Click the button above to see the login modal. Use <strong>demoventhub.com</strong> and <strong>password123</strong> for demo access.
+            </p>
+        </div>
+    </div>
+
+<div class="modal-overlay" id="login-modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 id="modal-title">Login to EventHub</h2>
+                <button class="close-modal" id="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="form-container">
+                    <div class="form-section">
+                        <!-- Login Form -->
+                        <form class="login-form">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="Enter your email">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <div class="password-container">
+                                    <input type="password" id="password" class="form-control" placeholder="Enter your password">
+                                    <button type="button" class="password-toggle">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-options">
+                                <div class="remember-me">
+                                    <input type="checkbox" id="remember">
+                                    <label for="remember">Remember me</label>
+                                </div>
+                                <a href="#" class="forgot-password">Forgot password?</a>
+                            </div>
+                            
+                            <button type="submit" class="btn" style="width: 100%;">
+                                <i class="fas fa-sign-in-alt"></i> Login
+                            </button>
+                            
+                            <div class="register-prompt">
+                                Don't have an account? <a href="#" id="show-register">Register here</a>
+                            </div>
+                            
+                            <div class="divider">
+                                <span>OR</span>
+                            </div>
+                            
+                            <div class="social-login">
+                                <button class="social-btn google">
+                                    <i class="fab fa-google"></i>
+                                </button>
+                                <button class="social-btn facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                                <button class="social-btn twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="demo-note">
+                                <p>For demo purposes, use <strong>deventhub.com</strong> and <strong>password123</strong></p>
+                            </div>
+                        </form>
+                        
+                        <!-- Registration Form -->
+                        <form class="register-form">
+                            <div class="form-group">
+                                <label for="reg-name">Full Name</label>
+                                <input type="text" id="reg-name" class="form-control" placeholder="Enter your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="reg-email">Email Address</label>
+                                <input type="email" id="reg-email" class="form-control" placeholder="Enter your email">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="reg-password">Password</label>
+                                <div class="password-container">
+                                    <input type="password" id="reg-password" class="form-control" placeholder="Create a password">
+                                    <button type="button" class="password-toggle">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="reg-confirm">Confirm Password</label>
+                                <div class="password-container">
+                                    <input type="password" id="reg-confirm" class="form-control" placeholder="Confirm your password">
+                                    <button type="button" class="password-toggle">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="remember-me">
+                                    <input type="checkbox" id="terms">
+                                    <label for="terms">I agree to the <a href="#" style="color: var(--primary);">Terms & Conditions</a></label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn" style="width: 100%;">
+                                <i class="fas fa-user-plus"></i> Create Account
+                            </button>
+                            
+                            <div class="form-footer">
+                                Already have an account? <a href="#" id="show-login">Login here</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
