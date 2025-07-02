@@ -15,7 +15,7 @@ export class ConcertsService {
             date: '2025-10-12',
             location: 'Anthonys College',
             description: 'Your favorite rock bands from the 80s and 90s together on one stage for an unforgettable night',
-            ticketPrice: '1000 LKR',
+            ticketPrice: '1000',
             ticletsLeft: 100
         },
         {
@@ -25,7 +25,7 @@ export class ConcertsService {
             date: '2025-10-12',
             location: 'Anthonys College',
             description: 'Your favorite rock bands from the 80s and 90s together on one stage for an unforgettable night',
-            ticketPrice: '1000 LKR',
+            ticketPrice: '1000',
             ticletsLeft: 100
         },
         {
@@ -35,7 +35,7 @@ export class ConcertsService {
             date: '2025-10-12',
             location: 'Anthonys College',
             description: 'Your favorite rock bands from the 80s and 90s together on one stage for an unforgettable night',
-            ticketPrice: '1000 LKR',
+            ticketPrice: '1000',
             ticletsLeft: 100
         },
         {
@@ -45,7 +45,7 @@ export class ConcertsService {
             date: '2025-10-12',
             location: 'Anthonys College',
             description: 'Your favorite rock bands from the 80s and 90s together on one stage for an unforgettable night',
-            ticketPrice: '1000 LKR',
+            ticketPrice: '1000',
             ticletsLeft: 100
         },
         {
@@ -55,7 +55,7 @@ export class ConcertsService {
             date: '2025-10-12',
             location: 'Anthonys College',
             description: 'Your favorite rock bands from the 80s and 90s together on one stage for an unforgettable night',
-            ticketPrice: '1000 LKR',
+            ticketPrice: '1000',
             ticletsLeft: 100
         },
         {
@@ -65,7 +65,7 @@ export class ConcertsService {
             date: '2025-10-12',
             location: 'Anthonys College',
             description: 'Your favorite rock bands from the 80s and 90s together on one stage for an unforgettable night',
-            ticketPrice: '1000 LKR',
+            ticketPrice: '1000',
             ticletsLeft: 100
         },
         {
@@ -75,7 +75,7 @@ export class ConcertsService {
             date: '2025-10-12',
             location: 'Anthonys College',
             description: 'Your favorite rock bands from the 80s and 90s together on one stage for an unforgettable night',
-            ticketPrice: '1000 LKR',
+            ticketPrice: '1000',
             ticletsLeft: 100
         }
     ]
